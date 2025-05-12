@@ -1,0 +1,41 @@
+using UnityEngine;
+
+public class PlayerMovement : MonoBehaviour
+{
+    private float speed = 10.0f;
+
+    float movementMultiplier = 10f;
+
+    private Rigidbody rb;
+
+    private Vector3 direction;
+
+    float horizontalInput;
+    float verticalInput;
+
+    void Start()
+    {
+        rb = gameObject.GetComponent<Rigidbody>();
+    }
+    private void Update()
+    {
+        MovementInput();
+    }
+
+    private void FixedUpdate()
+    {
+        MovePlayer();
+    }
+
+    private void MovementInput()
+    {
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        verticalInput = Input.GetAxisRaw("Vertical");
+        direction = transform.forward * verticalInput + transform.right * horizontalInput;
+    }
+
+    private void MovePlayer()
+    {
+        rb.AddForce(direction.normalized * speed * movementMultiplier, ForceMode.Acceleration);
+    }
+}
