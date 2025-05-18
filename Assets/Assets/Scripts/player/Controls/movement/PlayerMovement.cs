@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float speed = 10.0f;
+    [SerializeField] private float speed = 10.0f;
 
-    float movementMultiplier = 10f;
+    [SerializeField] float movementMultiplier = 10f;
 
     private Rigidbody rb;
 
