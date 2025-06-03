@@ -30,8 +30,8 @@ public class Shoot : MonoBehaviour
 
     private void toShoot()
     {
-        GameObject bullet = Instantiate(rocketPref, rocketSpawnPoint.position,
-        rocketSpawnPoint.rotation);
+        Quaternion rotatedRotation = rocketSpawnPoint.rotation * Quaternion.Euler(0, 90, 0);
+        GameObject bullet = Instantiate(rocketPref, rocketSpawnPoint.position, rotatedRotation);
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         rb.linearVelocity = rocketSpawnPoint.forward * 10;
     }

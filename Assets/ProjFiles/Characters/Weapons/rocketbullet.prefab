@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 2083584670903361166}
   - component: {fileID: 7252094090875474768}
   - component: {fileID: 5439171064515343884}
-  - component: {fileID: 2668596282536036556}
   - component: {fileID: 7050436757932888289}
+  - component: {fileID: 647856255056740432}
+  - component: {fileID: 9133986180342484274}
   m_Layer: 0
   m_Name: rocketbullet
   m_TagString: Untagged
@@ -88,18 +89,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2668596282536036556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3015360695695311218}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc44c940bc916bb45b94fb29465472d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &7050436757932888289
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,3 +116,39 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!114 &647856255056740432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015360695695311218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcbe370b5fe738d46bce7b13bfc4cfe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletLifeTime: 7
+--- !u!136 &9133986180342484274
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015360695695311218}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.09
+  m_Height: 0.52
+  m_Direction: 0
+  m_Center: {x: -0, y: 0, z: 0}
