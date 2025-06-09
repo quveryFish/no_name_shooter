@@ -3,6 +3,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private float bulletLifeTime;
+    [SerializeField] private Explosions explosionsData;
 
     private void Update()
     {
@@ -20,7 +21,8 @@ public class Bullet : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("dfgjkdfg");
+        //Debug.Log("dfgjkdfg");
+        Instantiate(explosionsData.explosionsList[0], gameObject.transform.position, Quaternion.identity);
         Destroy(gameObject);
 
     }
