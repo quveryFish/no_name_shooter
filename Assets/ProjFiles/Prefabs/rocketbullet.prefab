@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7252094090875474768}
   - component: {fileID: 5439171064515343884}
   - component: {fileID: 7050436757932888289}
-  - component: {fileID: 647856255056740432}
+  - component: {fileID: 3963251069316842711}
   - component: {fileID: 7249394588826816943}
   m_Layer: 0
   m_Name: rocketbullet
@@ -116,7 +116,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!114 &647856255056740432
+--- !u!114 &3963251069316842711
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

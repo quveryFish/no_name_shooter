@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     float horizontalInput;
     float verticalInput;
 
+    private bool isMoving = false;
+
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
@@ -38,4 +40,5 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.AddForce(direction.normalized * speed * movementMultiplier, ForceMode.Acceleration);
     }
+
 }
